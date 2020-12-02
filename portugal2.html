@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="images/portugalFlag.png"/>
+        <title>Portugal</title>
+        <style> #flexbox-item4{text-transform: uppercase; text-decoration: underline;} </style>
+    </head>
+
+    <body>
+      <div class="skip"><a href="#portugal_description">Skip to Main Content</a></div>
+        <header>
+          <nav>
+            <div class="flexbox-container">
+              <div class= "flexbox-item" id= "flexbox-item1"><a href="index.html">Home</a></div>
+              <div class= "flexbox-item" id="flexbox-item2"><a href="japan.html">Japan</a></div>
+              <div class= "flexbox-item" id="flexbox-item3"><a href="scotland.html">Scotland</a></div>
+              <div class= "flexbox-item" id= "flexbox-item4"><a href="portugal2.html">Portugal</a></div>
+              <div class= "flexbox-item" id= "flexbox-item5"><a href="contact.html">Contact</a></div>
+            </div>
+          </nav>
+        </header>
+
+    <main>
+      <p id = "portugal_description">Here are some photos from my time in Portugal. Click on the arrows or the images to explore.</p>
+      
+      <div class = "container">
+
+        <div class = "mySlides">
+            <img src="images/portugal/color_castle.jpg" alt="Colorful Castle" id = "color_castle" style="width:50%;display:block;margin-left:auto;margin-right:auto;"/>
+        </div>
+
+        <div class = "mySlides">
+            <img src="images/portugal/floating_castle.jpg" alt="Castle on the Water" id = "floating_castle" style="width:400px;display:block;margin-left:auto;margin-right:auto;"/>
+        </div>
+
+        <div class = "mySlides">
+            <img src="images/portugal/gingerbread.jpg" alt="A home in Scotland" id = "gingerbread" style = "width:400px;display:block;margin-left:auto;margin-right:auto;"/>
+        </div>
+
+        <div class = "mySlides">
+            <img src="images/portugal/pastries.jpg" alt="Portuguese Tarts" id = "pastries" style = "width:400px;display:block;margin-left:auto;margin-right:auto;"/>
+        </div>
+
+        <div class = "mySlides">
+            <img src="images/portugal/water_view.jpg" alt="View of the water" id = "water_view" style= "width:50%;display:block;margin-left:auto;margin-right:auto;"/>
+        </div>
+
+        <div class = "mySlides">
+            <img src="images/portugal/color_view.jpg" alt="View of Portuguese Buildings" id = "color_view" style = "width:400px;display:block;margin-left:auto;margin-right:auto;"/>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- thumbnail images -->
+        <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/portugal/color_castle.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Pena Palace">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/portugal/floating_castle.jpg" style="width:100%" onclick="currentSlide(2)" alt="Bélem Tower">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/portugal/gingerbread.jpg" style="width:100%" onclick="currentSlide(3)" alt="A home">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/portugal/pastries.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pastéis de Nata (Portuguese Custard Tarts)">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/portugal/water_view.jpg" style="width:100%" onclick="currentSlide(5)" alt="View of the water">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/portugal/color_view.jpg" style="width:100%" onclick="currentSlide(6)" alt="Another view from The Pena Palace">
+            </div>
+          </div>
+
+      </div>
+      
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+      </script>
+
+
+
+
+    </main>
+
+<footer>
+  <p>Until we can travel again...</p>
+</footer>
+</body>
+</html>

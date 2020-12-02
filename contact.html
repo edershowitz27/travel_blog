@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="images/letter.png"/>
+
+        <title>Contact</title>
+        <style> #flexbox-item5{text-transform: uppercase; text-decoration: underline;} </style>
+    </head>
+
+    <body>
+      <div class="skip"><a href="#name_id">Skip to Main Content</a></div>
+        <header>
+          <nav>
+            <div class="flexbox-container">
+              <div class= "flexbox-item" id="flexbox-item1"><a href="index.html">Home</a></div>
+              <div class= "flexbox-item" id="flexbox-item2"><a href="japan.html">Japan</a></div>
+              <div class= "flexbox-item" id="flexbox-item3"><a href="scotland.html">Scotland</a></div>
+              <div class= "flexbox-item" id= "flexbox-item4"><a href="portugal2.html">Portugal</a></div>
+              <div class= "flexbox-item" id= "flexbox-item5"><a href="contact.html">Contact</a></div>
+            </div>
+          </nav>
+        </header>
+
+        <form action="https://formspree.io/f/mleowllv" method="POST">
+            <fieldset class = "contact_container">
+              <legend id = "contact_me_text">Contact me!</legend>
+
+              <label for = "name_id" id = "name_label">Name:</label> 
+              <input type="text" placeholder="First and last name" id = "name_id" name = "name" required>
+          
+              <label for = "email_id" id = "email_label">Email:</label>
+              <input type="email" placeholder = "Email" id= "email_id" name = "email" required>
+          
+          
+              <label for = "phone_id" id = "phone_label">Phone Number:</label>
+              <input type="tel" placeholder = "Phone number" id="phone_id" name = "phoneNumber" required>
+
+          
+              <label for = "message_id" id = "message_label">What do you want to talk about?</label>
+              <textarea name= "message" placeholder = "Message" id = "message_id" required></textarea>
+          
+              <input type="submit" id = "submit_button" value = "Let's Chat!">
+            </fieldset>
+           </form>
+
+
+           <footer>
+            <p>Until we can travel again...</p>
+          </footer>
+          </body>
+          </html>
